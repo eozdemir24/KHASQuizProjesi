@@ -1,0 +1,10 @@
+Entering switch block
+Good job
+Pretty good
+Passed
+Not so good
+Failed
+Unknown grade
+Exiting switch block
+Set the variable to different value and then try...
+

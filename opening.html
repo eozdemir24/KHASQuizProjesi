@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROJECT</title>
+    <meta charset="utf-8">
+  	<link rel="stylesheet" href="open.css">
+	<script type="text/javascript">
+      function isNumber(evt) {
+        if (!/[0-9\.]/i.test(String.fromCharCode(evt.which))) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+      
+      function isLetter(evt) {
+        if (!/[a-z\.]/i.test(String.fromCharCode(evt.which))) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+      
+      function validate() {
+        if (document.getElementById("name").value == "" && document.getElementById("number").value == "") {
+           alert("Please fill required fields.");
+           return false;
+        } 
+        
+        if (document.getElementById("name").value == "") {
+             alert("Please fill required fields.") ;
+           return false;
+           }
+        if (document.getElementById("number").value == "") {
+            alert("Plese fill required fields.")
+          return false;
+          }
+        
+        if (!/^([2])([0])([0-1])([0-9])\.([1-9])([1-9])\.([0-9])([0-9])\.([0-9])([0-9])([0-9])$/.test(document.getElementById("number").value)) {
+          alert("Check your student id.");
+          return false;
+        }
+        
+        return true;
+      }
+    </script>
+       
+</head>
+<body class="body" >
+   <div class="bback">
+   <div class="grad">
+    <img src="logo.png">
+     <center>
+     <form action="question1.html">
+
+	 Student Name:<br>
+
+	 <input id="name" class="i1" placeholder="Your Name" type="text" name="name" onkeypress="return isLetter(event)"  > <br><br>
+	 Last Name:<br>
+
+	 <input class="i1" id="name" type="text" placeholder="Your Last Name" name="lname" onkeypress="return isLetter(event) "><br><br>
+	 Student ID:<br>
+
+     <input  id="number" value="20" type="text" maxlength="14" onkeypress="return isNumber(event)" >.
+    
+     
+     <br><br>
+
+
+	   <input class="i4" type="submit" name="Login" value="Login" onclick="return validate()"/></a>
+     
+
+
+     
+     </form>
+     
+</center>
+     </div>
+       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr>
+      <footer class="foot" ><b>Copyright&copy; IT201 ERKAN ÖZDEMİR </b></footer><br><br>
+      </div>
+</body>
+</html>

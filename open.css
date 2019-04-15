@@ -1,0 +1,182 @@
+.bback{
+    position: absolute;
+   
+    width: 100%;
+    height: 100%;
+    background-image: url(ekmek.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    z-index: 0;
+	
+    
+}
+
+
+.qback{
+    background-color: #797c86;
+	color: black;
+}
+img {margin-top: 15px;}
+
+.body{
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.question{
+    font-family: 
+
+}
+
+#myForm{
+	max-width: : 50%;
+	font-size: 20px;
+	font-family: "Cooper Black"; cooper , serif;
+	
+	
+}
+
+h1 {
+	font-family: "Cooper Black"; cooper , serif ;
+	padding: 3em;
+	text-align: center;
+	margin-top: 3em;
+}
+
+.i1{
+	width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.i4{
+	 width: 20%;
+    background-color:#20B2AA;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Arial,Helvetica, sans-serif";
+    color: white;
+	border-radius: 20px;
+}
+.i4:hover{
+	background-color: black;
+}
+input[type="text"]:Hover{
+	background-color: black;
+	color: white;
+}
+
+.foot{
+    text-align: center;
+    text-transform: uppercase;
+    font-style: bold;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    
+
+}
+
+#number{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.submit{
+    width: 15%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    background-color:#A1342F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Cooper Black"; cooper, sans ;
+    color: black;
+}
+
+.smbt{
+    text-align: center;
+}
+
+.questions{
+    font-family: "Arial"; Helvetica, sans-serif ;
+    margin-top: 18em;
+    margin-left: 40em;
+}
+
+
+.choices{
+    list-style-type: none;
+    font-family: "Arial"; Helvetica, sans-serif ;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.checkbox {  color:black;
+          font-weight: bold;
+}
+
+p{
+    font-family: "Arial"; Helvetica, sans-serif ;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.left{
+    float: left;
+    height: 100%;
+    text-align: left;
+    width: 50%;
+    
+}
+.right{
+    float: right;
+   
+    
+    width: 50%;
+    height: 100%;
+
+}
+
+h2{
+    color: black;
+    text-align: center;
+    font-style: bold;
+    font-size: 35px;
+	border: 1px solid;
+	border-radius: 5px;
+	background-color: white;
+	margin-left: 200px;
+	margin-right: 200px;
+	}
+
+textarea{
+    margin-left: 15em;
+}

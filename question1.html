@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Questions For String Cases</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="open.css">
+    <script type="text/javascript">
+        function check() {
+            var hManyQuestion=7;            
+            var givenAnswers=new Array();
+            var answers=new Array("A","C","C","D","B","A","C");
+            var tanswer=0;
+            var wanswer=0;
+            var answer=0;
+            var res="";
+
+
+            for (i=1; i <=hManyQuestion; i++){
+                var numOfQ = document.getElementsByName("s"+i);
+            
+            
+
+            for(c=0; c<numOfQ.length; c++){
+
+                if(numOfQ[c].checked){
+                    if (numOfQ[c].value==answers[i-1]){
+                        answer=1;
+                    }
+                    
+                    else{
+                        answer=0;
+                    }
+                    
+                    if(answer){
+                        res +=i+".Your answer is"+numOfQ[c].value+",True<br/>";
+                    }
+                    
+                    else{
+                        res +=i+". Your answer is "+numOfQ[c].value+", False, True Answer "+answers[i-1]+"<br />";
+                    }
+                        givenAnswers.push(numOfQ[c].value);
+                  
+
+
+              }
+             }
+            }
+            for(n=0; n<hManyQuestion; n++){
+
+                if(givenAnswers[n]==answers[n]){
+                    tanswer++;
+                }
+                else{
+                    wanswer++;
+                }
+
+            }
+            if(document.getElementById("cb2").checked) {
+                tanswer=tanswer+1
+                res+="8. Your answer is true.<br>  "
+            }
+            else if (document.getElementById("cb1").checked && document.getElementById("cb3").checked){
+                wanswer=wanswer+1
+                res+= "8. Your answer is False.True answer is second option. <br>"
+            }
+			else if (document.getElementById("cb2").checked && document.getElementById("cb3").checked){
+                wanswer=wanswer+1
+                res+= "8. Your answer is False.True answer is second option. <br>"
+            }
+			else if (document.getElementById("cb1").checked && document.getElementById("cb2").checked){
+                wanswer=wanswer+1
+                res+= "8. Your answer is False.True answer is second option. <br>"
+            }
+			else{
+                wanswer=wanswer+1
+                res+= "8.Your answer is False,True answer should be second option.  <br>"
+            }
+            if (document.getElementById("s9").value == 2)
+            {tanswer=tanswer+1
+            res+="9. Your answer is True.<br>" }
+            else
+            {wanswer=wanswer+1
+            res+="9. Your answer is False,True answer should be third option. <br>" }
+			 
+     
+   
+ 
+                      res+="Result: "+tanswer+" True, "+wanswer+" False"+"<br />";
+                      document.getElementById('result').innerHTML=res;
+            }
+            
+        
+    </script>
+</head>
+<body class="qback" >
+     
+     
+     <div id="questions">
+     
+     <p ><h2>There are 10 questions about String statement.</h2></p>
+     <form name="ıtproject">
+     
+     <p>Q1)<br>Which string method returns the entire string as lowercase characters.</p><br><br>
+     <ul class="choices">
+     <li>A)<input type="radio" name="s1" value="A"><label>public String toLowerCase() </label></li>
+     <li>B)<input type="radio" name="s1" value="B"><label> public String toUpperCase()</label></li>
+     <li>C)<input type="radio" name="s1" value="C"><label>public String replace </label></li>
+     <li>D)<input type="radio" name="s1" value="D"><label>public int lastIndexOf </label></li></ul>
+     <br>
+     
+     <hr>
+     
+     <p>Q2)<br>What is the output of this javascript code ?<br>
+< script>
+ function Myfunction() {<br>
+    var str = "We are prepare a project" <br>
+    var txt = str.replace("we","Students");<br>
+    document.write(txt);<br>
+}<br>
+< / script>
+</p><br><br>
+     <ul class="choices">
+     <li>A)<input type="radio" name="s2" value="A"><label>We are students. </label></li>
+     <li>B)<input type="radio" name="s2" value="B"><label>We are prepare a project</label></li>
+     <li>C)<input type="radio" name="s2" value="C"><label>Students are prepare a project..</label></li>
+     <li>D)<input type="radio" name="s2" value="D"><label>Null. </label></li></ul>
+     <br><br>
+     
+     
+     <hr>
+     <p>Q3)<br>What is output for this codes ?<br>
+< script> <br>   
+ var str = "How to use ‘lastindexof’!";<br>   
+ var pos = str.lastIndexOf("lastindexof");<br>   
+document.write(pos);<br>   
+< / script >
+
+     </p><br><br>
+
+
+     <ul class="choices">
+     <li>A)<input type="radio" name="s3" value="A"><label>5 </label></li>
+     <li>B)<input type="radio" name="s3" value="B"><label>25</label></li>
+     <li>C)<input type="radio" name="s3" value="C"><label>12</label></li>
+     <li>D)<input type="radio" name="s3" value="D"><label>11</label></li></ul>
+     <br><br>
+     
+
+
+     <hr>
+     <p>Q4)<br>What is output for this codes ?<br>
+< script ><br>
+    var str = " What are you doing ? ";<br>
+    var res = str.substring(14,21);<br>
+    document.write(res);<br>
+< / script >
+
+     </p><br><br>
+
+     
+     <ul class="choices">
+     <li>A)<input type="radio" name="s4" value="A"><label>“udoing” </label></li>
+     <li>B)<input type="radio" name="s4" value="B"><label>doing   </label></li>
+     <li>C)<input type="radio" name="s4" value="C"><label>oing ?  </label></li>
+     <li>D)<input type="radio" name="s4" value="D"><label>doing ?</label></li></ul>
+     <br><br>
+    
+
+    <hr>
+     <p>Q5)<br>What is output fort his codes ?<br>  
+< button onclick="Myfunction()">Please click me < / button><br>  
+< script><br>  
+function Myfunction() {<br>  
+    var str = "Best computer brand is Asus" <br>  
+    var txt = str.replace("Asus","Apple");<br>  
+    document.write(txt);<br>  
+}<br>  
+< / script>
+</p><br><br>
+     <ul class="choices">
+     <li>A)<input type="radio" name="s5" value="A"><label>Best computer brand is Asus    </label></li>
+     <li>B)<input type="radio" name="s5" value="B"><label>Best computer brand is Apple </label></li>
+
+     <br><br>
+
+     <hr>
+     <p>Q6)<br>< script>   <br>       
+         var  university= ("kadirhasuniversity");<br>  
+        document.write(university.length);<br>  
+        university. lastIndexOf('n')<br>  
+         < / script><br>  
+      
+Find why this code not working correctly 
+</p><br><br>
+     <ul class="choices">
+     <li>A)<input type="radio" name="s6" value="A"><label>Because of lack of “;”   </label></li>
+     <li>B)<input type="radio" name="s6" value="B"><label>because of  using lenght in 3.lines    </label></li>
+     <li>C)<input type="radio" name="s6" value="C"><label>closing < / script>  at mistake place.   </label></li>
+     <li>D)<input type="radio" name="s6" value="D"><label>Some variable problem.</label></li></ul>
+     <br><br>
+    
+
+     <hr>
+     <p>Q7)<br>    < script><br>
+       var x= "final exams is coming";<br>
+        var y= x.indexOf('z');<br>
+        document.write(y);   <br> 
+   < / script><br>
+
+ Find Why it is not working correcty ?
+ </p><br><br>
+     <ul class="choices">
+     <li>A)<input type="radio" name="s7" value="A"><label>Because of lack of “;”   </label></li>
+     <li>B)<input type="radio" name="s7" value="B"><label>because of  using lenght in 3.lines    </label></li>
+     <li>C)<input type="radio" name="s7" value="C"><label>x variable does not has a z letter  place </label></li>
+     <li>D)<input type="radio" name="s7" value="D"><label>I should not use “document.write” in this place.</label></li></ul>
+     <br><br>
+
+
+<p>Q8)<br>What is the difference between substring () and slice ()?<br>
+
+
+     <ul class="checkbox" style="list-style:none">
+     <li><input type="checkbox" id="cb1">The slice()  returns the index of  the first occurrence of a specified text in a string ,substring ()  of the last occurrence of a specified text in a string</li><br>
+     <li><input type="checkbox" id="cb2">The difference is that substring() cannot accept negative indexes.</li><br>
+     <li><input type="checkbox" id="cb3">The slice () function returns the length of an index, substring () returns the width of the index</li><br><br>
+    </ul>
+    <hr>
+     
+     <p>Q9)<br>Which of the following is true for the use of the search () method? </p>
+     
+     
+     <select id="s9">
+     <option value="0">var pos = search("locate");</option>
+     <option value="1">var = str.search("locate");</option>
+     <option value="2">var pos = str.search("locate");</option>
+     <option value="3">var = str search("locate");</option>
+     </select><br><br>
+    
+     
+     <p></p>
+
+     <hr>
+     <hr>
+     <p>Q10)<br>What do you think your string question?</p>
+
+     <textarea id="s10" value="once" cols="20" rows="2"></textarea>
+         
+         
+     
+
+             
+             
+     
+           <fieldset class="result">
+<center>
+<div id="result"></div>
+<input class="i4" type="button" value="Answer!" onclick="check()" />
+<input class="i4" type="button" value="Reset!" onClick="window.location.reload(false)" />
+ </form>
+<div id="result"></div>
+</center>
+</fieldset>
+<div>
+    <br><br><br><br><br><br>
+      <footer class="foot" ><b>Copyright&copy; IT201 PROJECT ERKAN ÖZDEMİR </b></footer><br><br>
+</div>
+     
+
+</body>
+</html>
